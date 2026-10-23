@@ -18,3 +18,5 @@ print("pandas:", pd.__version__)
 print("pytest:", pytest.__version__)
 
 print("\nENVIRONMENT VERIFICATION DONE")
+
+

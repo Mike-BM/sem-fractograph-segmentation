@@ -6,3 +6,4 @@ scipy
 matplotlib
 pandas
 pytest
+openpyxl

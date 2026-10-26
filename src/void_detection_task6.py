@@ -1,7 +1,7 @@
 
 from pathlib import Path
 import csv
-
+import os
 import cv2
 import numpy as np
 import matplotlib
@@ -9,10 +9,22 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
 
-ROOT = Path(__file__).resolve().parents[1]
-IMAGE_PATH = ROOT / "data" / "raw" / "Brittle" / "100Cr6_AR_05_11.png"
-OUT = ROOT / "data" / "processed" / "void_detection"
 
+ROOT = Path(__file__).resolve().parents[1]
+
+IMAGE_PATH = Path(
+    os.environ.get(
+        "SEM_IMAGE_PATH",
+        str(ROOT / "data" / "raw" / "Brittle" / "100Cr6_AR_05_11.png"),
+    )
+)
+
+OUT = Path(
+    os.environ.get(
+        "SEM_OUTPUT_DIR",
+        str(ROOT / "data" / "processed" / "void_detection"),
+    )
+)
 LOW_INTENSITY_MAX = 127
 HISTOGRAM_WINDOW = 5
 LOCAL_WINDOW = 31

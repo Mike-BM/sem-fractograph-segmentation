@@ -5,3 +5,23 @@ __pycache__/
 .pytest_cache/
 *.backup
 data/raw/
+# Generated processing outputs
+data/processed/
+
+# Backup and experimental scripts
+src/contour_refinement_v1.py
+src/region_classification_task7_backup.py
+
+# Generated processing outputs
+data/processed/
+
+# Backup and experimental scripts
+src/contour_refinement_v1.py
+src/region_classification_task7_backup.py
+
+# Generated processing outputs
+data/processed/
+
+# Backup and experimental scripts
+src/contour_refinement_v1.py
+src/region_classification_task7_backup.py
